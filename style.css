@@ -1,0 +1,460 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Righteous', cursive;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    overflow-x: hidden;
+}
+body.black{
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+body.black > .kepala .gambar {
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+body.black > .about .about1 img {
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+body.black > .about .about2 img {
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+body.black > .porto .porto1 #gambar12{
+    padding: 3px;
+    border-radius: 0 0 50px 50px ;
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+body.black > .porto .porto2 #gambar22{
+    padding: 3px;
+    border-radius: 0 0 50px 50px ;
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+.navigasi{
+    background-color: silver;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);    
+}
+body.black > .navigasi{
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, 0.5);  
+}
+.hi img{
+    position: absolute;
+    height:200px;
+    width: 200px;
+    left:-49px;
+    top:120px;
+    animation: muncul 2s ease;
+  
+}
+
+.ikon{
+    height:50px;
+    width:50px;
+    margin-left:20px;
+   background-image: url(ganteng.jpeg);
+   background-size: cover;
+    border-radius:50px;
+}
+.nama{
+    width:50%;
+}
+.pilihan >ul{
+    display:flex;
+    justify-content: space-arround;
+}
+.pilihan>ul>li{
+    list-style: none;
+    margin:20px;
+    padding:5px;
+    border-radius:3px;
+    background-color: black;
+    cursor: pointer;
+}
+.pilihan>ul>li>a{
+    color:white;
+    text-decoration: none;
+}
+.tombol{
+    display:none;
+}
+.kepala{
+    margin-top:10px;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+}
+.gambar{
+    width:200px;
+    height:200px;
+    background-size: cover;
+    border-radius: 100px;
+    background-image: url(suip1.jpg);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    opacity:0;
+    transition: 2s;
+    z-index: -999;
+}
+.gambar.muncul{
+    opacity: 1;
+    animation: bounce 2s ease-in-out forwards;
+}
+.judul h3{
+    opacity:0;
+    transform: translateX(100px);
+    transition: 1.5s, 0.5s;
+}
+.judul h3.muncul{
+    opacity:1;
+    transform: translateX(0px);
+
+}
+.judul p{
+    opacity:0;
+    transform: translateX(-100px);
+    transition: 1.5s, 0.5s;
+}
+.judul p.muncul{
+    opacity:1;
+    transform: translateX(0px);
+
+}
+.jabout{
+    margin-bottom: 15px;
+}
+.jabout, .jskill{
+    text-align:center;
+    margin-top:20px;
+}
+.about{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    text-align: center;
+
+}
+.overlay1{
+    background: rgba(0, 0, 0, 0.8);
+    z-index:22;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: none;
+    padding : 100px 0;
+}
+.overlay1 p{
+    color:white;
+}
+.overlay2 p{
+    color:white;
+}
+
+.overlay1.muncul{
+    display: block;
+}
+.overlay1 img{
+    box-shadow: 3px 3px 5px 1px rgba(255, 255, 255, 0.5);
+}
+.overlay2 img{
+    box-shadow: 3px 3px 5px 1px rgba(255, 255, 255, 0.5);
+}
+.overlay2{
+    background: rgba(0, 0, 0, 0.8);
+    
+    z-index:22;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: none;
+    padding : 100px 0;
+}
+.overlay2.muncul{
+    display: block;
+    
+}
+.about .about1 img{
+    border-radius: 50px 0 50px 0;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.about1 img:hover {
+    transform: translateX(-10px) translateY(-10px);
+    cursor: pointer;
+    
+}
+.about .about2 img{
+    border-radius: 0 50px 0 50px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.about2 img:hover {
+    transform: translateX(10px) translateY(-10px);
+    cursor: pointer;
+}
+.porto{
+    text-align: center;
+    margin:20px;
+}
+.porto h3{
+    margin-bottom: 15px;
+}
+.porto img{
+    height:300px;
+    width:300px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 2s;
+}
+.porto1{
+    display:block;
+    position: relative;
+}
+.porto1 img{
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s;
+}
+.porto1 p{
+    z-index: -1;
+    position: absolute;
+    top:20%;
+    left:40%;
+    text-align: center;
+    width: 50%;
+    opacity:0;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s;
+}
+.porto1 p.muncul{
+    opacity: 1;
+}
+.porto2{
+    margin-top: 5px;
+    display:block;
+    position: relative;
+}
+.porto2 p{
+    z-index: -1;
+    position: absolute;
+    top:20%;
+    right:40%;
+    text-align: center;
+    width: 50%;
+    opacity:0;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s;
+}
+.porto2 p.muncul{
+    opacity: 1;
+}
+.porto1 img.muncul{
+    transform: translateX(-300px);
+}
+.porto2 img{
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55)2s;
+}
+.porto2 img.muncul{
+    transform: translateX(300px);
+}
+#gambar12{
+    padding: 3px;
+    border-radius: 0 0 50px 50px ;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+#gambar22{
+    padding: 3px;
+    border-radius: 0 0 50px 50px ;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.skill{
+    display:grid;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+    text-align: Center;
+
+
+}
+.skill1 > span{
+    transform: rotate(-90deg) scale(0);
+    opacity:0;
+    transition: 0.4s;
+}
+
+.skill1 span.skill13{
+    transform: rotate(0deg) scale(100%);
+    opacity:1;
+}
+.skill2 span{
+    transform: rotate(90deg) scale(0);
+    opacity:0;
+    transition: 0.4s;
+  
+}
+
+.skill2 img:hover ~ span{
+    transform: rotate(0deg) scale(100%);
+    opacity:1;
+}
+.skill3 > span{
+    transform: rotate(-90deg) scale(0);
+    opacity:0;
+    transition: 0.4s;
+}
+
+.skill3 span.skill33{
+    transform: rotate(0deg) scale(100%);
+    opacity:1;
+}
+.skill4 span{
+    transform: rotate(90deg) scale(0);
+    border-radius:0;
+    opacity:0;
+    transition:  0.4s;
+}
+.skill4 img:hover ~ span{
+    transform: rotate(0deg) scale(100%);
+    opacity:1;
+  
+}
+.skill1, .skill2, .skill3, .skill4{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+}
+
+.skill img{
+    height:200px;
+    width:200px;
+    
+}
+.footer{
+    height: 80px;
+    background-color: silver;
+    text-align: center;
+    box-shadow: -1px -1px 5px 1px rgba(0, 0, 0, 0.5);    
+}
+.footer span i{
+    color: black;
+}
+body.black > .footer{
+    box-shadow: -1px -1px 5px 1px rgba(255, 255, 255, 0.5);
+}
+/* animasi*/
+@keyframes muncul{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: 1s 0.5s;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes bounce{
+    0%{ 
+        transform: translateY(-100px);
+    }
+    15%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* responsive*/
+@media (max-width: 1024px){
+    .nama{
+        width:30%;
+    }
+    .porto{
+        display:grid;
+        grid-template-columns: repeat(1,minmax(200px,1fr));
+    }
+    .porto1 img.muncul, .porto2 img.muncul{
+        transform: none;
+    }
+    .porto .porto1 p{
+       display: none;
+    }
+    .porto .porto2 p{
+       display:none;
+    }
+    .about2 img:hover {
+        transform: translateX(10px) translateY(10px);
+    }
+}
+@media (max-width: 768px){
+    .nama{
+        width:30%;
+    }
+    .overlay1 img{
+        width:400px;
+    }
+    .overlay2 img{
+        width:400px;
+    }
+}
+@media (max-width: 600px){
+    body.black .navigasi .pilihan ul{
+        background-color: rgb(255, 255, 255);
+    }
+    .ikon, .nama{
+       margin:9px 20px;
+    }
+    .pilihan ul{
+        flex-direction: column;
+        height:100vh;
+        top:68px;
+        position: absolute;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+        background-color: black;
+        transition: 0.3s;
+
+    }
+    nav ul.slide{
+        transform: translateX(-20%);
+        z-index: 333;
+    }
+    .tombol{
+        display:block;
+        margin-right:25px;
+
+        margin-top: -2px;
+        cursor:pointer;
+    }
+    .about1 img{
+        width:400px;
+    }
+    .about2 img{
+        width:400px;
+
+    }
+    .about{
+        display:grid;
+        grid-template-columns: repeat(1,minmax(400px,1fr));
+        text-align: center;
+    
+    }
+    .skill{
+        display:grid;
+        grid-template-columns: repeat(1,minmax(200px,1fr));
+        text-align: Center;
+    }
+    .skill img{
+        border-radius: 100%;
+    }
+
+}
